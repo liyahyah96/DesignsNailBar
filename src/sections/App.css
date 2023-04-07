@@ -1,0 +1,527 @@
+/****************** Universal *******************/
+
+section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/****************** Homepage *******************/
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-mobile {
+  z-index: 999;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.nav-mobile-button {
+  background-color: white;
+  border: none;
+  aspect-ratio: 1;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.nav-mobile-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--accent-color);
+  padding: 0;
+  margin: 0 auto;
+  width: 75%;
+  height: 100%;
+}
+
+.nav-mobile-menu > a {
+  font-family: garelina;
+  font-size: 1.5rem;
+  color: black;
+  transition: color 0.25s ease-in-out;
+}
+
+.active {
+  display: flex;
+}
+
+.nav-bar {
+  width: 100%;
+  padding: 1% 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav-bar >  a {
+  font-family: garelina;
+  font-size: 2vw;
+  color: white;
+  transition: color 0.25s ease-in-out;
+}
+
+.nav-bar > a:hover, .nav-mobile a:hover {
+  color: var(--accent-color);
+}
+
+.cover-img {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.cover-img > img {
+  aspect-ratio: 1;
+  overflow: hidden;
+  object-fit: contain;
+  object-position: center;
+  animation: slide-from-left 2s ease-in-out forwards;
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.home {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  gap: 5vh;
+}
+
+.nav-container {
+  position: absolute;
+  width: 55%;
+  height: 65%;
+  top: 0;
+  right: 10%;
+  animation: slide-from-top 2.25s ease-in forwards;
+}
+
+.nav-container > img {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+section.home > .title-container {
+  width: 90%;
+  height: 20%;
+  background-color: white;
+  position: relative;
+  animation: slide-from-right 2s forwards;
+  border: 3px solid var(--accent-color);
+  border-left: none;
+  border-right: none;
+}
+
+h1 {
+  color: var(--accent-color);
+  text-align: center;
+  font-family: elizabeth;
+  font-size: clamp(2rem, 8vw, 10rem);
+  transform: translate(0, -50%);
+  top: 50%;
+  width: 100%;
+  position: absolute;
+}
+
+.home > .subtite-container {
+  width: 70%;
+  height: 30%;
+  background-color: var(--primary-color);
+  position: relative;
+  opacity: 0;
+  animation: slide-from-right 2s forwards;
+  animation-delay: 0.75s;
+  border: 2px solid white;
+}
+
+.home > .subtite-container > h2 {
+  padding: 3rem;
+  width: 100%;
+  text-align: center;
+  font-family: garelina;
+  font-size: clamp(0.5rem, 2.5vw, 3.25rem);
+  transform: translate(0, -50%);
+  top: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+/****************** Services *******************/
+
+.services > .choose-us {
+  position: relative;
+  /* height: clamp(200px, 50vh, 350px); */
+  width: 100%;
+  min-width: 250px;
+  background-color: var(--primary-color);
+  padding: 3% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services > .choose-us > p {
+  font-family: garelina;
+  font-size: clamp(1rem, 2vw, 3.25rem);
+  color: white;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.offer-services {
+  background-color: white;
+}
+
+.services-grid {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2%;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.services-grid > .card {
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-self: center;
+  aspect-ratio: 1 / 1.25;
+  width: 100%;
+  position: relative;
+  display: block;
+  border: 2px solid black; 
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.services-grid > .card::before, .services-grid > .card::after {
+  content: "";
+  position: absolute;
+  width: 0;
+}
+
+.services-grid > .card::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+}
+
+.services-grid > .card::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+}
+
+.services-grid > .card:hover::before, .services-grid > .card:hover::after {
+  animation: enclose 1s forwards;
+}
+
+.card > .service-img {
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  transform: scale(0.75);
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.card:hover > .service-img {
+  transform: scale(0.5);
+}
+
+.services-grid > .card > a {
+  color: black;
+  font-family: garelina;
+  font-size: clamp(.75rem, 2.56vw, 3.25rem);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 1% 0 0 2%;
+  z-index: 1;
+  transition: color 1s ease-in-out;
+}
+
+.services-grid > .card > a:hover {
+  color: var(--accent-color);
+}
+
+.offer-services {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 3% 0;
+}
+
+.offer-services > img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+@keyframes enclose {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  50% {
+    height: 0%;
+    width: 100%;
+  }
+  100% {
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+  }
+}
+
+/****************** Testimonies *******************/
+
+.testimonies {
+  width: 100%;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  padding: 3% 0;
+}
+
+.carousel {
+  width: clamp(300px, 60%, 1000px);
+  aspect-ratio: 2.5 / 1;
+  margin: 0 auto;
+  padding: 0;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.carousel-item {
+  background-image: url("/assets/tropical-green-leaves-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.button-arrow, .button-indicator {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.indicator-symbol-active {
+  color: var(--accent-color);
+}
+
+.item-details {
+  color: white;
+  white-space: normal;
+  padding: 0 5%;
+  font-size: clamp(1rem, 1.5vw, 2rem)
+}
+
+.item-details > p:nth-child(2) {
+  text-align: right;
+}
+
+
+/****************** Contact *******************/
+
+.contact {
+  position: relative;
+  width: 100%;
+  padding: 3% 0;
+}
+
+.contact > img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 60%;
+  z-index: -1;
+}
+
+.contact-cards {
+  width: 60%;
+  padding-bottom: 7%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2%;
+  color: black;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 25%;
+  aspect-ratio: 1 / 1;
+  max-width: 300px;
+  width: 100%;
+  padding: 10% 1rem;
+  border: 2px solid var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-card > span {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.contact-details {
+  font-size: clamp(1rem, 1vw, 1.25rem);
+}
+
+.opening-hours > .time {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.phone > .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.contact-details > a {
+  transition: color 0.25s ease-in-out;
+  color: black;
+}
+
+.contact-details a:hover {
+  color: var(--accent-color);
+}
+
+/****************** Gallery *******************/
+.gallery {
+  background-color: var(--primary-color);
+  padding: 3% 0;
+}
+
+/****************** Footer *******************/
+
+.footer {
+  background-color: white;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 3% 0;
+}
+
+.footer > .social-links {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.footer > .social-links > a > img {
+  height: 2.5rem;
+  margin: 0.5rem;
+}
+
+.footer > span {
+  font-family: garelina;
+  color: black;
+  display: inline;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+}
+
+.footer > span::before {
+  content: '© ';
+  font-family: playfair;
+}

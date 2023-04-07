@@ -1,0 +1,82 @@
+:root {
+  font-synthesis: none;
+  font-size: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary-color: #789F84;
+  /* --accent-color: #D8A41D; */
+  --accent-color: #E3B130;
+}
+
+@font-face {
+  font-family: garelina;
+  src: url(assets/font/GarelinaRegular-K791A.ttf)
+}
+
+@font-face {
+  font-family: elizabeth;
+  src: url(assets/font/HerttlayElizabeth-3zA1L.otf)
+}
+
+@font-face {
+  font-family: playfair;
+  src: url(assets/font/PlayfairDisplay-VariableFont_wght.ttf)
+}
+
+*, body {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: var(--fs-400);
+}
+
+.fade-in-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1500ms ease-out, transform 900ms ease-out,
+    visibility 1500ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+h3 {
+  font-family: elizabeth;
+  color: var(--accent-color);
+  font-size: clamp(2rem, 8vw, 7rem);
+  text-align: center;
+  width: 100%;
+  line-height: 0.75;
+  z-index: 1;
+}
+
+
+@media (width < 600px) {
+
+  .nav-container {
+    right: 22.5%;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+}

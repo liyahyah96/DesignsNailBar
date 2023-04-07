@@ -1,0 +1,28 @@
+#gallery {
+    padding-top: 2%;
+}
+
+#gallery a {
+    font-family: playfair;
+    padding: 2%;
+    transition: color 0.5s ease-in-out;
+}
+
+#gallery a:hover {
+    color: var(--accent-color);
+}
+
+article {
+    padding: 3%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#gallery h2 {
+    margin: 0 auto;
+    font-family: playfair;
+    width: 60%;
+}
