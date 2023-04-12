@@ -1,14 +1,14 @@
 import FadeInSection from './FadeInSectionEffect'
+import spaSetImage from '../assets/spa-composition-with-care-items-light-wall.jpg'
 
 export default function Contact() {
     return (
         <FadeInSection>
             <section id="contact" className="contact">
-                <img src="\assets\spa-composition-with-care-items-light-wall.jpg" alt="spa care image" />
+                <img src={spaSetImage} alt="spa care image" />
                 <h3>Hope to see you soon</h3>
                 <div className="contact-cards">
                     <div className="contact-card opening-hours">
-                        {/* <img src="/assets/clock.png" alt="clock icon" /> */}
                         <span class="material-symbols-outlined">
                         schedule
                         </span>

@@ -1,12 +1,12 @@
 import { Outlet, Link, ScrollRestoration } from 'react-router-dom'
-import './services-menu.css'
-import Footer from '../sections/Footer'
+import Footer from '../components/Footer'
+import monsteraImg from '../assets/tropical-green-leaves-background.jpg'
 
 function ServicesMenu() {
     return (
         <div id="services-menu">
             <div className="services-header">
-                <img src='../assets/tropical-green-leaves-background.jpg' />
+                <img src={monsteraImg} alt="monstera img" />
                 <Link to="/"><h1> Designs Nails Bar </h1></Link>
             </div>
             <nav className="nav-tabs">

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Root from './sections/Root'
+import './App.css'
+import Root from './components/Root'
 import Gallery from './routes/gallery'
 import ServicesMenu from './routes/services-menu'
 import Manicure from './routes/manicure'

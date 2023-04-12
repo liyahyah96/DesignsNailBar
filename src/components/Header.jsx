@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import FadeInSection from './FadeInSectionEffect'
+import coverImage from '../assets/cover-art.png'
+import monsteraImage from '../assets/tropical-green-leaves-background.jpg'
 
 export default function Header() {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -19,12 +21,12 @@ export default function Header() {
             </nav>
             <header>
                 <div className="cover-img">
-                    <img src="/assets/cover-art.png"/>
+                    <img src={coverImage} alt="cover-image"/>
                 </div>
 
                 <section className="home">
                     <div className="nav-container">
-                        <img src="/assets/tropical-green-leaves-background.jpg" alt="tropical plant image" />
+                        <img src={monsteraImage} alt="tropical plant image" />
                         <nav className="nav-bar">
                             <Link to={`services-menu`}>Services</Link>
                             <a href="#contact">Contact</a>

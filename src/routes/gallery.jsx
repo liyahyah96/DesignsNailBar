@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import './gallery.css'
-import Footer from '../sections/Footer'
+import Footer from '../components/Footer'
 
 function Gallery() {
     return (
