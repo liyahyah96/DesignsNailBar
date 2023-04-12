@@ -312,6 +312,7 @@ h1 {
   height: 100%;
   position: relative;
   padding: 3% 0;
+  background-color: transparent;
 }
 
 .offer-services > img {
@@ -319,6 +320,7 @@ h1 {
   height: 100%;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 @keyframes enclose {
