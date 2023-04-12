@@ -603,6 +603,7 @@ nav.nav-tabs {
 nav.nav-tabs a {
   text-align: center;
   font-family: garelina;
+  color: black;
   transition: color 500ms ease-in-out;
   font-size: clamp(1.25rem, 1.5vw, 2rem);
 }
