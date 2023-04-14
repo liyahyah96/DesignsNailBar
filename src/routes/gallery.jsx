@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
+import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
 function Gallery() {
     return (
-        <div id="gallery">
-            <Link to={`/`}>{`<`} Go Back</Link> 
+        <div id="gallery" className="gallery">
+            <Nav />
             <article>
                 <h2>Sorry! Gallery is still under construction.</h2>
                 <h2>

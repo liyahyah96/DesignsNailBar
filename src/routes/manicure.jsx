@@ -5,14 +5,14 @@ export default function Manicure() {
                 <div className="package-type">
                     <span> * Any package or set with color gel is $10 extra. </span>
                     <article>
-                        <h3>Classic Manicure</h3> <span className="highlight">$20</span>
+                        <h2>Classic Manicure</h2> <span className="highlight">$20</span>
                         <p>
                             Nail soak, trim, shaping, cuticle removal, 
                             buffing, and choice of regular polish.
                         </p>
                     </article>
                     <article>
-                        <h3>Deluxe Manicure</h3> <span className="highlight">$27</span>
+                        <h2>Deluxe Manicure</h2> <span className="highlight">$27</span>
                         <p>
                             This treatment is a blend of fragrances and ingredients
                             that will hydrate your skin leaving it feel velvety smooth.
@@ -21,7 +21,7 @@ export default function Manicure() {
                         </p>
                     </article>
                     <article>
-                        <h3>Luxury Manicure</h3> <span className="highlight">$35</span>
+                        <h2>Luxury Manicure</h2> <span className="highlight">$35</span>
                         <p>
                             Hydrate and smooth out the wrinkles on your skin with deluxe treatement 
                             PLUS paraffin wax application and collagen gloves. 
@@ -31,7 +31,7 @@ export default function Manicure() {
                 <div className="nail-type">
                 <span> * Any package or set with color gel is $10 extra. </span>
                     <article>
-                        <h3>Acrylic</h3>
+                        <h2>Acrylic</h2>
                         <div className="price-table">
                             <span>Full Set</span> <span className="price">$35</span>
                             <span>Refills</span> <span className="price">$25</span>
@@ -45,7 +45,7 @@ export default function Manicure() {
                         </div>
                     </article>
                     <article>
-                        <h3>Dipping</h3>
+                        <h2>Dipping</h2>
                         <div className="price-table">
                             <span>Dipping powder overlay</span> <span className="price">$40</span>
                             <span>Dipping powder with tip</span> <span className="price">$45</span>
@@ -55,7 +55,7 @@ export default function Manicure() {
                         </div>
                     </article>
                     <article>
-                        <h3>A La Carte</h3>
+                        <h2>A La Carte</h2>
                         <div className="price-table">
                             <span>Nail shape</span> <span className="price">$5</span>
                             <span>Nail repair</span> <span className="price">$5</span>

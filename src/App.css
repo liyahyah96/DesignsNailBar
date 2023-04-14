@@ -1,224 +1,187 @@
-/****************** Universal *******************/
+/****************** global *******************/
 
 section {
+  width: 100%;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-/****************** Homepage *******************/
+h3 {
+  font-family: elizabeth;
+  color: var(--accent-color);
+  font-size: clamp(3rem, 8vw, 7rem);
+  text-align: center;
+  width: 100%;
+  line-height: 0.75;
+  z-index: 99;
+}
+
+/****************** Nav *******************/
+
+nav.main-nav {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 4rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+  z-index: 999;
+  position: fixed;
+  transition: opacity 300ms ease-in-out;
+}
+
+.nav-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 1;
+  padding: 0;
+  aspect-ratio: 1;
+  width: 3rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-start;
+  font-family: garelina;
+  font-size: 2rem;
+}
+
+.nav-links > a {
+  color: white;
+  justify-self: center;
+  align-self: center;
+  font-size: clamp(1rem, 1.25vw, 2rem);
+}
+
+.nav-logo {
+  overflow: hidden;
+  text-align: center;
+  height: inherit;
+  max-height: 100px;
+}
+
+.nav-logo > img {
+  object-fit: contain;
+  object-position: center;
+  height: inherit;
+  max-height: inherit;
+}
+
+.ghost {
+  opacity: 0;
+}
+
+.expand {
+  height: 75vh !important;
+}
+
+.active {
+  display: grid !important;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/****************** Header *******************/
 
 header {
   position: relative;
   width: 100%;
   height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: row;
-}
-
-.nav-mobile {
-  z-index: 999;
   background-color: transparent;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
-.nav-mobile-button {
-  background-color: white;
-  border: none;
-  aspect-ratio: 1;
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-
-.nav-mobile-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid var(--accent-color);
-  padding: 0;
-  margin: 0 auto;
-  width: 75%;
-  height: 100%;
-}
-
-.nav-mobile-menu > a {
-  font-family: garelina;
-  font-size: 1.5rem;
-  color: black;
-  transition: color 0.25s ease-in-out;
-}
-
-.active {
   display: flex;
-}
-
-.nav-bar {
-  width: 100%;
-  padding: 1% 0;
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.nav-bar >  a {
-  font-family: garelina;
-  font-size: 2vw;
-  color: white;
-  transition: color 0.25s ease-in-out;
-}
-
-.nav-bar > a:hover, .nav-mobile a:hover {
-  color: var(--accent-color);
+  transform: translateY(4rem);
 }
 
 .cover-img {
-  width: 55%;
-  display: flex;
-  justify-content: center;
+  z-index: -1;
+  height: inherit;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .cover-img > img {
   aspect-ratio: 1;
   overflow: hidden;
-  object-fit: contain;
-  object-position: center;
-  animation: slide-from-left 2s ease-in-out forwards;
-}
-
-@keyframes slide-from-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-from-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-from-top {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-
-.home {
-  height: 100%;
-  width: 60%;
-  position: absolute;
-  right: 0;
-  gap: 5vh;
-}
-
-.nav-container {
-  position: absolute;
-  width: 55%;
-  height: 65%;
-  top: 0;
-  right: 10%;
-  animation: slide-from-top 2.25s ease-in forwards;
-}
-
-.nav-container > img {
   object-fit: cover;
   object-position: center;
+  height: inherit;
+}
+
+.intro {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  align-items: flex-end;
+}
+
+.intro > img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  width: 100%;
-  height: 100%;
+  right: calc(((45% - 30%) / 2) + 5% );
+  width: 30%;
+  height: calc(65% + 4rem);
   z-index: -1;
 }
 
-section.home > .title-container {
-  width: 90%;
-  height: 20%;
-  background-color: white;
-  position: relative;
-  animation: slide-from-right 2s forwards;
-  border: 3px solid var(--accent-color);
-  border-left: none;
-  border-right: none;
+.intro > .header-titles {
+  width: 55%;
+  min-width: 450px;
+  padding: 0 5%;
 }
 
-h1 {
+.intro h1 {
   color: var(--accent-color);
   text-align: center;
   font-family: elizabeth;
-  font-size: clamp(2rem, 8vw, 10rem);
-  transform: translate(0, -50%);
-  top: 50%;
-  width: 100%;
-  position: absolute;
+  font-size: clamp(4rem, 8vw, 10rem);
+  background-color: white;
+  border: 3px solid var(--accent-color);
+  border-left: none;
+  border-right: none;
+  margin-bottom: 2rem;
 }
 
-.home > .subtite-container {
-  width: 70%;
-  height: 30%;
+.intro h2 {
   background-color: var(--primary-color);
-  position: relative;
-  opacity: 0;
-  animation: slide-from-right 2s forwards;
-  animation-delay: 0.75s;
   border: 2px solid white;
-}
-
-.home > .subtite-container > h2 {
-  padding: 3rem;
+  padding: 10%;
   width: 100%;
   text-align: center;
   font-family: garelina;
-  font-size: clamp(0.5rem, 2.5vw, 3.25rem);
-  transform: translate(0, -50%);
-  top: 50%;
-  position: absolute;
+  color: white;
+  font-size: clamp(1.25rem, 2.5vw, 3.25rem);
   z-index: 2;
 }
 
 /****************** Services *******************/
 
-.services > .choose-us {
+.services-intro {
   position: relative;
-  /* height: clamp(200px, 50vh, 350px); */
   width: 100%;
   min-width: 250px;
   background-color: var(--primary-color);
   padding: 3% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.services > .choose-us > p {
+.services-intro > p {
   font-family: garelina;
   font-size: clamp(1rem, 2vw, 3.25rem);
   color: white;
@@ -227,8 +190,20 @@ h1 {
   margin: 0 auto;
 }
 
-.offer-services {
-  background-color: white;
+.services-options {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 3% 0;
+  background-color: transparent;
+}
+
+.services-options > img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .services-grid {
@@ -237,20 +212,18 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 2%;
   justify-content: center;
-  align-self: center;
   margin: 0 auto;
 }
 
 .services-grid > .card {
+  background-color: rgba(255, 255, 255, 0.75);
   background-repeat: no-repeat;
   background-position: center;
   justify-self: center;
   aspect-ratio: 1 / 1.25;
   width: 100%;
   position: relative;
-  display: block;
   border: 2px solid black; 
-  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .services-grid > .card::before, .services-grid > .card::after {
@@ -293,8 +266,7 @@ h1 {
 
 .services-grid > .card > a {
   color: black;
-  font-family: garelina;
-  font-size: clamp(.75rem, 2.56vw, 3.25rem);
+  font-size: clamp(1.25rem, 2.5vw, 3.25rem);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -305,22 +277,6 @@ h1 {
 
 .services-grid > .card > a:hover {
   color: var(--accent-color);
-}
-
-.offer-services {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  padding: 3% 0;
-  background-color: transparent;
-}
-
-.offer-services > img {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: -1;
 }
 
 @keyframes enclose {
@@ -340,10 +296,8 @@ h1 {
 
 /****************** Testimonies *******************/
 
-.testimonies {
-  width: 100%;
+.reviews {
   background-color: var(--primary-color);
-  overflow: hidden;
   padding: 3% 0;
 }
 
@@ -434,14 +388,13 @@ h1 {
 
 .contact-cards {
   width: 60%;
-  padding-bottom: 7%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   justify-items: center;
   align-items: center;
   justify-content: space-evenly;
   gap: 2%;
-  color: black;
+
 }
 
 .contact-card {
@@ -459,10 +412,12 @@ h1 {
 .contact-card > span {
   font-size: 2.5rem;
   text-align: center;
+  color: var(--accent-color);
 }
 
 .contact-details {
   font-size: clamp(1rem, 1vw, 1.25rem);
+  color: black;
 }
 
 .opening-hours > .time {
@@ -480,25 +435,16 @@ h1 {
 }
 
 .contact-details > a {
-  transition: color 0.25s ease-in-out;
+  font-family: playfair !important;
   color: black;
-}
-
-.contact-details a:hover {
-  color: var(--accent-color);
-}
-
-/****************** Gallery *******************/
-.gallery {
-  background-color: var(--primary-color);
-  padding: 3% 0;
 }
 
 /****************** Footer *******************/
 
 .footer {
   background-color: white;
-  justify-content: center;
+  text-align: center;
+  height: 100%;
   gap: 0.5rem;
   padding: 3% 0;
 }
@@ -506,12 +452,12 @@ h1 {
 .footer > .social-links {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .footer > .social-links > a > img {
   height: 2.5rem;
-  margin: 0.5rem;
 }
 
 .footer > span {
@@ -528,58 +474,50 @@ h1 {
   font-family: playfair;
 }
 
-/********************************** Services Route ***********************************/
+/********************************** Services Page ***********************************/
 
-#services-menu > section {
-  background-image: url(../assets/tropical-green-leaves-background.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-#services-menu section {
-  padding: 2% 0;
-}
-
-#services-menu h1 {
-  letter-spacing: 2px;
+.services-page {
   position: relative;
-  padding: 2% 0;
-  transform: translate(0, 0);
+  min-height: 100vh;
 }
 
-.services-header {
-  position: relative;
-}
-
-.services-header > img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.services-content > img {
+  z-index: -999;
   position: absolute;
-  display: block;
+  object-position: center;
+  object-fit: cover;
 }
 
-#services-menu article {
+.services-content {
+  height: 100%;
+  transform: translateY(4rem);
+  overflow: hidden;
+}
+
+.services-page footer {
+  transform: translateY(4rem);
+}
+
+.services-content section {
+  width: inherit;
+  height: inherit;
+  padding: 2% 0;
+}
+
+.services-content article {
   margin: 0 auto;
   padding: 5%;
   height: auto;
 }
 
-#services-menu article p, #services-menu span {
+.services-content article p, .services-content span, .services-content li {
   font-family: playfair;
   font-size: 1.25rem;
   letter-spacing: 0.75px;
   display: block;
 }
 
-#services-menu h2 {
-  font-family: elizabeth;
-  color: var(--accent-color);
-  font-size: 10rem;
-  text-align: center;
-}
-
-#services-menu h3 {
+.services-content h2 {
   padding: 2% 0;
   font-family: garelina;
   color: var(--primary-color);
@@ -587,11 +525,14 @@ h1 {
   text-align: left;
 }
 
-#services-menu h4 {
+.services-content h3 {
+  padding: 2% 0;
   font-family: playfair;
   font-weight: normal;
-  font-size: 1.75rem;
-  margin-top: 2%;
+  font-size: 1.25rem;
+  letter-spacing: 0.75px;
+  color: black;
+  text-align: left;
 }
 
 nav.nav-tabs {
@@ -616,12 +557,13 @@ nav.nav-tabs a:hover {
 
 .grid {
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  overflow: hidden;
   align-items: flex-start;
   justify-content: center;
   padding: 5% 0;
-  gap: 5% 0;
 }
 
 .grid > * {
@@ -632,6 +574,10 @@ nav.nav-tabs a:hover {
   padding: 2% 0;
 }
 
+.grid > article {
+  height: 100%;
+}
+
 .package-type span, span.price {
   text-align: right;
 }
@@ -640,6 +586,10 @@ nav.nav-tabs a:hover {
   display: block;
   width: 100%;
   text-align: center;
+}
+
+.nail-type h2{
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .highlight {
@@ -662,7 +612,7 @@ nav.nav-tabs a:hover {
 }
 
 #services-menu article > ul {
-  padding: 0;
+  padding-top: 1rem;
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
@@ -694,3 +644,26 @@ nav.nav-tabs a:hover {
   font-size: 1.25rem;
   letter-spacing: 0.75px;
 }
+
+
+/****************** Gallery Page *******************/
+.gallery article {
+  background-color: var(--primary-color);
+  padding: 3% 0;
+  padding-top: 4rem;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery h2 {
+  font-family: garelina;
+  color: white;
+  font-size: 3rem;
+  display: inline-flex;
+  justify-self: center;
+  align-self: center;
+}
+

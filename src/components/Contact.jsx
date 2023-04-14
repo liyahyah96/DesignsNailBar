@@ -14,11 +14,11 @@ export default function Contact() {
                         </span>
                         <div className="contact-details time">
                             <p>Mon-Fri:</p>
-                            <p>10AM - 7PM</p>
+                            <p>10:00 AM - 7:00 PM</p>
                             <p>Saturday:</p>
-                            <p>9:30AM - 7PM</p>
+                            <p>9:30 AM - 7:00 PM</p>
                             <p>Sunday:</p>
-                            <p>12PM - 5:30PM</p>
+                            <p>11:00 PM - 5:00 PM</p>
                         </div>
                     </div>
                     <div className="contact-card phone">

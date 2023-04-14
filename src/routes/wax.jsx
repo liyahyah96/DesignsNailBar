@@ -3,7 +3,7 @@ export default function Wax() {
         <section id="wax">
             <div className="grid">
                 <article>
-                    <h3>Waxing</h3>
+                    <h2>Waxing</h2>
                     <div className="price-table">
                         <span>Eye brows</span> <span className="price">$10</span>
                         <span>Chin</span> <span className="price">$10</span>
@@ -15,7 +15,7 @@ export default function Wax() {
                     </div>
                 </article>
                 <article>
-                    <h3> Eye Lash Extensions </h3>
+                    <h2> Eye Lash Extensions </h2>
                     <div className="price-table">
                         <span>Volume set</span> <span className="price">$120</span>
                         <span>Individual</span> <span className="price">$100</span>

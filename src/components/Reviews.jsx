@@ -5,7 +5,7 @@ import Carousel from '../components/Carousel'
 function Reviews() {
     return (
         <FadeInSection>
-            <section className="testimonies">
+            <section className="reviews">
                 <h3> Word on the street </h3>
                 <Carousel />
             </section>
