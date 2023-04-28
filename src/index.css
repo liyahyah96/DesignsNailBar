@@ -73,6 +73,7 @@ section {
 
 article {
   position: relative;
+  height: 100%;
 }
 
 img {
@@ -247,9 +248,10 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
+  height: inherit;
 }
 
-.services-bg {
+/* .services-bg {
   z-index: -1;
   background-image: url(../src/assets/female-bare-feet-hands-manicure-pedicure-concept.jpg);
   background-repeat: no-repeat;
@@ -258,16 +260,18 @@ header {
   position: absolute;
   height: 100%;
   width: 100%;
-}
+} */
 
 .services-grid {
   width: 85%;
+  height: 100% + 5em;
   max-width: 1410px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0 0.5em;
+  /* gap: 0 0.5em; */
   place-items: center;
-  margin: 0.75em auto 3em auto;
+  margin: 0 auto;
+  /* margin: 0.75em auto 3em auto; */
 }
   
 .services-grid > .card {
@@ -278,7 +282,6 @@ header {
   aspect-ratio: 1 / 1.2;
   width: 100%;
   max-width: 250px;
-  margin: 0.25em 0;
   position: relative;
   border: 2px solid black; 
 }
