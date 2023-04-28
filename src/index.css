@@ -265,10 +265,11 @@ header {
 }
 
 .services-grid {
-  width: 100%;
+  width: 90%;
   max-width: 1410px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
   place-items: center;
   margin: 0 auto;
 }
@@ -279,8 +280,7 @@ header {
   background-position: center;
   justify-self: center;
   aspect-ratio: 1 / 1.2;
-  width: 80%;
-  margin: 1rem;
+  width: 100%;
   position: relative;
   border: 2px solid black; 
 }

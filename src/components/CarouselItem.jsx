@@ -4,7 +4,7 @@ export default function CarouselItem({item, index}) {
         <div className="carousel-item">
             <div></div>
             {/* <img className="carousel-img" src="" alt="" /> */}
-            <div id={"item-" + index} key={index} className="item-details">
+            <div id={"item-" + index} key={item.id} className="item-details">
                 <p>"{item.comment}"</p>
                 <p>- {item.name} </p>
             </div>

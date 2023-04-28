@@ -5,17 +5,20 @@ export default function Carousel() {
     const [activeIndex, setActiveIndex] = useState(0);
     let scrollInterval = null;
     let testimonies = [
-        {
+        {   
+            id: 1,
             name: "Laura Herrera from Google",
             photo: "src/assets/photo1.jpg",
             comment: "Best nails in town. Very nice employees and atmosphere is great."
         },
         {
+            id: 2,
             name: "Elizabeth Fisher from Google",
             photo: "src/assets/photo1.jpg",
             comment: "Great service! Beautiful nails, just what I asked for! I very much recommend this salon."
         },
         {
+            id: 3,
             name: "Taylar Williams from Google",
             photo: "src/assets/photo1.jpg",
             comment: "10 out of 10. They will take really good care of you!"

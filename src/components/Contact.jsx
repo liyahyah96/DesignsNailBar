@@ -8,7 +8,7 @@ export default function Contact() {
                 <h3>Hope to see you soon</h3>
                 <article className="contact-cards">
                     <div className="contact-card opening-hours">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                         schedule
                         </span>
                         <div className="contact-details time">
@@ -21,7 +21,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="contact-card phone">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                         phone_iphone
                         </span>
                         <div className="contact-details">
@@ -30,7 +30,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="contact-card address">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                         location_on
                         </span>
                         <div className="contact-details">
