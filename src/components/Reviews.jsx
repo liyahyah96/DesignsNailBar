@@ -2,15 +2,13 @@ import React from 'react'
 import FadeInSection from './FadeInSectionEffect'
 import Carousel from '../components/Carousel'
 
-function Reviews() {
+function Testimonials() {
     return (
-        <FadeInSection>
-            <section className="reviews">
-                <h3> Word on the street </h3>
-                <Carousel />
-            </section>
-        </FadeInSection>
+        <section className="testimonials">
+            <h3> Word on the street </h3>
+            <Carousel />
+        </section>
     )
 }
 
-export default Reviews;
+export default Testimonials;
