@@ -9,7 +9,7 @@
   --accent-color: #E3B130;
   --white-color: rgb(250, 250, 250);
   --black-color: rgb(0, 0, 0);
-  --sm-font: clamp(1rem, 1vw, 2.75rem);
+  --sm-font: clamp(1.05rem, 1vw, 2.75rem);
   --med-font: clamp(1.25rem, 3vw, 2rem);
 }
 
@@ -36,7 +36,7 @@ h1, h3 {
 }
 
 h1 {
-  font-size: clamp(3rem, 6vw, 10rem);
+  font-size: clamp(3.5rem, 6vw, 10rem);
   font-weight: 600;
   color: var(--accent-color);
   text-align: right;
@@ -45,7 +45,7 @@ h1 {
 
 h2 { 
   color: var(--primary-color);
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   text-align: right;
   max-width: 100%;
   margin: 0 auto;
@@ -53,7 +53,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(2.25rem, 5vw, 5rem);
+  font-size: clamp(2.75rem, 5vw, 5rem);
   color: var(--accent-color);
   text-align: center;
 }
@@ -104,7 +104,7 @@ nav {
 }
 
 nav a {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: white !important;
 }
 
@@ -117,7 +117,7 @@ nav a {
 }
 
 .mobile-nav > button {
-  height: 3rem;
+  height: 4rem;
   aspect-ratio: 1 / 1;
   display: block;
   position: absolute;
@@ -130,6 +130,10 @@ nav a {
   border-radius: 10%;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
   background-color: var(--white-color);
+}
+
+.mobile-nav > button > span {
+  font-size: 2.5rem;
 }
 
 .mobile-links {
@@ -216,7 +220,7 @@ header {
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
-  padding: 0 2%;
+  padding: 0 0.5rem;
   margin: 0 auto;
   width: 100%;
   align-self: center;
@@ -265,7 +269,7 @@ header {
   max-width: 1410px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  justify-content: center;
+  place-items: center;
   margin: 0 auto;
 }
   
@@ -276,7 +280,7 @@ header {
   justify-self: center;
   aspect-ratio: 1 / 1.2;
   width: 80%;
-  margin: 2%;
+  margin: 1rem;
   position: relative;
   border: 2px solid black; 
 }
@@ -411,7 +415,7 @@ header {
 .item-details {
   color: white;
   white-space: normal;
-  padding: 0 5%;
+  padding: 0 1rem;
   font-size: var(--med-font);
 }
 
@@ -451,7 +455,7 @@ header {
 .contact-card {
   display: flex;
   flex-direction: column;
-  gap: 25%;
+  gap: 3.5rem;
   aspect-ratio: 1 / 1;
   width: 100%;
   max-width: 300px;
@@ -497,7 +501,7 @@ header {
 
 .footer > span {
   color: black;
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-size: var(--sm-font);
 }
 
 .services-page {
