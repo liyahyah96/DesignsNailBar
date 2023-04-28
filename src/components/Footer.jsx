@@ -7,7 +7,7 @@ function Footer() {
             <footer className="footer">
                 <div className="social-links">
                     <a href="https://www.facebook.com/bydesignsnailbar"><img src={fbIcon} alt="fb icon" /></a>
-                    <a href="https://www.instagram.com/designsnailsbar"><img src={igIcon} alt="instagram icon" /></a>
+                    <a href="https://www.instagram.com/designsnailbar"><img src={igIcon} alt="instagram icon" /></a>
                 </div>
                 <span>© All Rights Reserved Designs Nail Bar</span>
             </footer>
