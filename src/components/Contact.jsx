@@ -27,7 +27,7 @@ export default function Contact() {
                         </span>
                         <div className="contact-details">
                             <p> Call to book your appointment </p>
-                            <a href="tel:+8174199175">(817) 419-9175</a>
+                            <a href="tel:+18174199175">(817) 419-9175</a>
                         </div>
                     </div>
                     <div className="contact-card address">
