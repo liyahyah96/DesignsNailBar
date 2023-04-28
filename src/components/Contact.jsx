@@ -3,11 +3,10 @@ import spaSetImage from '../assets/spa-composition-with-care-items-light-wall.jp
 
 export default function Contact() {
     return (
-        <FadeInSection>
             <section id="contact" className="contact">
-                <img src={spaSetImage} alt="spa care image" />
+                <div className="contact-bg"></div>
                 <h3>Hope to see you soon</h3>
-                <div className="contact-cards">
+                <article className="contact-cards">
                     <div className="contact-card opening-hours">
                         <span class="material-symbols-outlined">
                         schedule
@@ -38,8 +37,7 @@ export default function Contact() {
                             <p>1827 SW Green Oaks Blvd #109, Arlington, TX 76017</p>
                         </div>
                     </div>
-                </div>
+                </article>
             </section>
-        </FadeInSection>
     )
 }

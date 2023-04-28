@@ -40,7 +40,7 @@ export default function Carousel() {
     });
 
     return (
-        <div className="carousel">
+        <article className="carousel">
             <div className="inner"
                 style={{ transform: `translate(-${activeIndex * 100}%)` }}>
                 {testimonies.map( (item, index) => (
@@ -79,6 +79,6 @@ export default function Carousel() {
                         </span>
                 </button>
             </div>
-        </div>
+        </article>
     )
 }
