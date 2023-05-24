@@ -12,6 +12,11 @@ export default function Header() {
             <div className={ isPortrait ? "header-titles-portrait" : "header-titles"}>
                 <h1> Designs Nails Bar </h1>
                 <h2>You inspire our designs, <br/> we draw out your beauty. </h2>
+                <div className='discount-cta'>
+                    <span>Memorial Day Special</span>
+                    <span>10% OFF $40+</span>
+                    <a href='#contact'>Call to book your appointment!</a>
+                </div>
             </div>
         </header>
     )

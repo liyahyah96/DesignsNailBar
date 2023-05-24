@@ -228,6 +228,31 @@ header {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.discount-cta {
+  position: absolute;
+  right: 0;
+  background-color: #23395d;
+  border-radius: 0.5em;
+  max-height: 150px;
+  margin-right: 3rem;
+  padding: 1rem;
+  color: white;
+}
+
+.discount-cta span {
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.discount-cta a {
+  color: white;
+  display: block;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1em;
+}
+
 /* ************************************************** */
 
 .services-intro {
