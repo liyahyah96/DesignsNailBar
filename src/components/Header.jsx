@@ -13,8 +13,8 @@ export default function Header() {
                 <h1> Designs Nails Bar </h1>
                 <h2>You inspire our designs, <br/> we draw out your beauty. </h2>
                 <div className='discount-cta'>
-                    <span>Memorial Day Special</span>
-                    <span>10% OFF $40+</span>
+                    <span>4th of July Special</span>
+                    <span>15% OFF ANY SERVICE $40+</span>
                     <a href='#contact'>Call to book your appointment!</a>
                 </div>
             </div>
